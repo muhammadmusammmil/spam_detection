@@ -21,7 +21,7 @@ class SpamData:
             else:
                 collection = self.mongo_client[database_name][collection_name]
 
-            df = pd.read_csv(list(collection.find()))
+            df = pd.DataFrame(list(collection.find()))
             if "_id" in df.columns.to_list():
                 df = df.drop(columns=["_id"], axis=1)
             df.replace({"nan": np.nan}, inplace=True)
