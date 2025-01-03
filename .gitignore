@@ -177,3 +177,5 @@ cython_debug/
 =======
 .pypirc
 >>>>>>> 3d6879a (inital commit)
+
+artifact/
